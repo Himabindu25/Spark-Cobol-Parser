@@ -15,7 +15,7 @@ class parsing:
     sqlContext = SQLContext(sc)
 
     # Read file into RDD
-    lines = sc.textFile("C:\\Users\\M1055990\\Desktop\\BRE Tool\\BRE Files\\CobolCode.txt")
+    lines = sc.textFile("CobolCode.txt")
 
     # Call collect() to get all data and ZipWithIndex for adding index
     # llist = lines.collect()
@@ -69,7 +69,7 @@ class parsing:
     # Procedure_df.show()
 
     #Defining Excel sheet
-    writer = pandas.ExcelWriter("C:\\Users\\M1055990\\Desktop\\BRE Tool\\BRE Files\\Parsing_df_cobol.xls",
+    writer = pandas.ExcelWriter("Parsing_df_cobol.xls",
                                 engine='xlsxwriter')
 
     pdf = df.toPandas()
